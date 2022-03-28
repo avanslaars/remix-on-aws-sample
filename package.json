@@ -5,6 +5,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
+    "lint": "eslint ./app",
     "postinstall": "remix setup node",
     "build": "cross-env NODE_ENV=production remix build",
     "dev:remix": "cross-env NODE_ENV=development remix watch",
