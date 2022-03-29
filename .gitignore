@@ -6,3 +6,8 @@ node_modules
 preferences.arc
 sam.json
 sam.yaml
+
+# only include the example env
+.env.*
+!.env.example
+
