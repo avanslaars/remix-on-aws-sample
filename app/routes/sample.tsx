@@ -1,12 +1,12 @@
 import { LoaderFunction, useLoaderData } from 'remix'
 
 export const loader: LoaderFunction = async () => {
-  const sampleData = [
-    { id: 1, name: 'One', description: 'Item One' },
-    { id: 2, name: 'Two', description: 'Item Two' },
-    { id: 3, name: 'Three', description: 'Item Three' },
-    { id: 4, name: 'Four', description: 'Item Four' },
-  ]
+  // generate an array with 100 elements
+  const sampleData = Array.from({ length: 100 }, (_, i) => ({
+    id: i,
+    name: `Item ${i}`,
+  }))
+
   return { data: sampleData }
 }
 
@@ -17,9 +17,7 @@ export default function () {
       <h1>Sample Page</h1>
       <ul>
         {data.map((d: any) => (
-          <li key={d.id}>
-            {d.name} - {d.description}
-          </li>
+          <li key={d.id}>{d.name}</li>
         ))}
       </ul>
     </div>

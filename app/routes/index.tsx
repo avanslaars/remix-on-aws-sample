@@ -23,6 +23,7 @@ export default function Index() {
           </li>
         ))}
       </ul>
+      <p>Adding basic cypress run to GH Action</p>
     </div>
   )
 }
