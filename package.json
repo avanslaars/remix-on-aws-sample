@@ -13,7 +13,8 @@
     "dev": "cross-env NODE_ENV=development remix build && run-p dev:*",
     "start": "cross-env NODE_ENV=production arc sandbox",
     "cypress:open": "start-server-and-test dev http://localhost:3333 \"cypress open\"",
-    "cypress:run": "cross-env PORT=8811 start-server-and-test dev http://localhost:8811 \"cypress run\""
+    "cypress:run": "cross-env PORT=8811 start-server-and-test dev http://localhost:8811 \"cypress run\"",
+    "typecheck": "tsc -b && tsc -b cypress"
   },
   "dependencies": {
     "@remix-run/architect": "^1.2.3",
